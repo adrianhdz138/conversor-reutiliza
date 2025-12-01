@@ -1,0 +1,30 @@
+body {
+    background-color: aqua;
+    font-size: larger;
+    color: blueviolet;
+
+    h1,
+    p {
+        text-align: center;
+    }
+
+    div#entrada {
+
+        select,
+        input#valor {
+            font-size: medium;
+            width: auto;
+            height: 25px;
+        }
+
+        width: -moz-fit-content;
+        width: fit-content;
+        text-align: right;
+        margin: auto;
+    }
+
+    p#resultado,
+    p#invertido {
+        font-size: 30pt;
+    }
+}
