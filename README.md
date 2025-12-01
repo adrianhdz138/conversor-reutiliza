@@ -1,0 +1,5 @@
+Este conversor de unidades crea las unidades de magnitud primarias, como distancia, tiempo, masa, etc. Para ser reutilizadas en las magnitudes derivadas, como velocidad, aceleración, densidad, energía, potencia, etc.
+
+Por ejemplo, se definen los valores para las unidades de kilómetros (km) en distancia, y horas (h) en tiempo en el diccionario de factores ([factores.js](https://github.com/adrianhdz138/conversor-reutiliza/blob/main/factores.js)); en velocidad no hay valor definido para "km/h", sin embargo, si tú lo escribes en los campos de unidades de origen o destino, aparecerá (gracias a [generar\_nuevos\_factrores.js](https://github.com/adrianhdz138/conversor-reutiliza/blob/main/generar_nuevos_factrores.js)). Debido a que se reutilizan TODAS las unidades creadas en este diccionario, puedes incluso elegir una aceleración como unidades astronómicas por semana al cuadrado (ua/sem²).
+
+En la página, el primer número que sale en pantalla debajo de los campos de entrada, es la conversión de origen a destino, justo debajo está la conversión al revés, por si te preguntas cuál sería el resultado con las unidades intercambiadas, para que no tengas que hacerlo tú.
