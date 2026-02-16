@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es-419">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="factores.js"></script>
     <script src="crear_nuevos_factores.js"></script>
     <script src="generar_nuevos_factrores.js"></script>
@@ -11,22 +11,12 @@
     <script src="main.js"></script>
     <title>Conversor de unidades</title>
   </head>
-  <body onload="cambioTipo(Object.keys(factores)[0])">
+  <body>
     <h1>Conversor de unidades</h1>
     <p>Introduce el valor y selecciona las unidades:</p>
     <div id="entrada">
       <label for="tipo_seleccionado">Magnitud:</label>
-      <select
-        name="tipo_seleccionado"
-        id="tipo_seleccionado"
-        onchange="cambioTipo(this.value); calcular();"
-      >
-        <script type="text/javascript">
-          for (const tipo2s of Object.keys(factores)) {
-            document.write(`<option value='${tipo2s}'>${tipo2s}</option>`);
-          }
-        </script>
-      </select>
+      <select name="tipo_seleccionado" id="tipo_seleccionado"></select>
       <br />
       <label for="valor">Valor:</label>
       <input
@@ -34,8 +24,6 @@
         id="valor"
         name="valor"
         placeholder="Ingrese valor..."
-        onfocus="calcularEnVivo = setInterval(calcular, 1)"
-        onblur="clearInterval(calcularEnVivo)"
         required
       />
       <br />
@@ -46,7 +34,6 @@
         id="origen"
         name="origen"
         placeholder="Unidad..."
-        onblur="calcular()"
         required
       />
       <datalist name="origenlista" id="origenlista"></datalist>
@@ -58,12 +45,12 @@
         id="destino"
         name="destino"
         placeholder="Unidad..."
-        onblur="calcular()"
         required
       />
       <datalist name="destinolista" id="destinolista"></datalist>
     </div>
-    <p id="resultado">Aquí aparecerá el resultado...</p>
+    <p id="resultado"></p>
     <p id="invertido"></p>
   </body>
+  <script src="events.js"></script>
 </html>
